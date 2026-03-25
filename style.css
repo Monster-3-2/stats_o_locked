@@ -2124,62 +2124,70 @@ footer {
     }
 }
 /* ==========================================================================
-   /* ==========================================================================
-   SOL ULTIMATE FIX - ALL PAGES (Paste at the very bottom)
-/* ==========================================================================
-   SOL ULTIMATE SYSTEM RECOVERY - FINAL DOSE
+
    ========================================================================== */
 
-/* 1. TEAM PAGE FIX - EXACT CIRCLE LOOK */
-.team-grid {
+/* 1. Global Page Setup */
+/* ==========================================================================
+   SOL EMERGENCY OVERRIDE - ADMIN KHUSH HO JAYEGA LOOK
+   ========================================================================== */
+
+/* 1. TEAM PAGE RECOVERY (Force Gola Photo & Centered Cards) */
+html body .team-grid {
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: center !important; /* Cards center mein align honge */
+    justify-content: center !important;
     gap: 40px !important;
     padding: 50px 20px !important;
-    width: 100% !important;
-    max-width: 1200px !important;
     margin: 0 auto !important;
+    max-width: 1200px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
-.team-card {
+html body .team-card {
     background: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(0, 240, 255, 0.3) !important;
     border-radius: 25px !important;
     padding: 40px 30px !important;
-    width: 320px !important; /* Fixed width taaki cards bikhre nahi */
+    width: 320px !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important; /* Content center mein */
+    align-items: center !important;
     text-align: center !important;
     backdrop-filter: blur(15px) !important;
-    transition: 0.4s !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
-.member-photo {
+/* THE PERFECT GOLA PHOTO */
+html body .member-photo {
     width: 180px !important;
     height: 180px !important;
-    border-radius: 50% !important; /* PERFECT GOLA */
+    border-radius: 50% !important; 
     border: 4px solid #00f0ff !important;
     object-fit: cover !important;
     margin-bottom: 25px !important;
-    box-shadow: 0 0 25px rgba(0, 240, 255, 0.4) !important;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5) !important;
+    display: block !important;
 }
 
-/* 2. HEAVY GLOW TITLE FIX */
-.team-page-title, .section-title {
+/* 2. MEGA GLOW TITLE (No more hiding) */
+html body .team-page-title, 
+html body .section-title {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 4rem !important;
+    font-size: clamp(3rem, 10vw, 5rem) !important;
+    font-weight: 800 !important;
     color: #ffffff !important;
-    text-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff !important;
-    margin-top: 150px !important;
-    margin-bottom: 50px !important;
+    text-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff, 0 0 60px rgba(0, 240, 255, 0.5) !important;
+    margin: 160px 0 60px 0 !important;
     text-align: center !important;
+    display: block !important;
     width: 100% !important;
 }
 
-/* 3. RESEARCH & EVENTS PAGE FIX */
-.research-grid, .events-grid {
+/* 3. RESEARCH & EVENTS FIX (Clean Layout) */
+html body .research-grid, 
+html body .events-grid {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
     gap: 30px !important;
@@ -2187,35 +2195,33 @@ footer {
     margin: 0 auto !important;
 }
 
-.research-card, .event-card {
+html body .research-card, 
+html body .event-card {
     background: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid rgba(0, 240, 255, 0.15) !important;
     border-radius: 20px !important;
     padding: 30px !important;
-    text-align: left !important; /* Inka text left hi rahega */
+    text-align: left !important;
 }
 
 /* 4. LEADERBOARD TABLE REPAIR */
-.leaderboard-table {
+html body .leaderboard-table {
     width: 100% !important;
     border-collapse: collapse !important;
-    background: rgba(0,0,0,0.2) !important;
 }
-.leaderboard-table th {
+html body .leaderboard-table th {
     color: #00f0ff !important;
     border-bottom: 2px solid #00f0ff !important;
     padding: 15px !important;
+    text-align: left !important;
 }
-.leaderboard-table td {
+html body .leaderboard-table td {
     padding: 15px !important;
     border-bottom: 1px solid rgba(255,255,255,0.05) !important;
 }
 
-/* 5. OVERRIDE ANY WEIRD MARGINS FROM 2200 LINES */
-section {
-    padding: 60px 0 !important;
+/* 5. FORCE REMOVE WEIRD PADDINGS FROM 2200 LINES */
+html body section {
+    padding: 80px 0 !important;
     overflow: visible !important;
 }
-   ========================================================================== */
-
-/* 1. Global Page Setup */
