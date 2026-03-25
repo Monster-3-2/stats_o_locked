@@ -1,137 +1,341 @@
 /* ==========================================================================
-   SOL - THE ULTIMATE REBIRTH MASTER CSS (ALL PAGES FIXED)
-   ========================================================================== */
+SOL - FINAL MASTER CSS (CLEAN + PREMIUM + CONSISTENT UI)
+========================================================================== */
 
-/* 1. CORE SYSTEM */
+/* ================= ROOT ================= */
 :root {
-    --cyan: #00f0ff;
-    --dark: #020b16;
-    --glass: rgba(255, 255, 255, 0.05);
-    --border: rgba(0, 240, 255, 0.2);
+--cyan: #00f0ff;
+--dark: #020b16;
+--glass: rgba(255, 255, 255, 0.05);
+--border: rgba(0, 240, 255, 0.2);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  }
+
+html { scroll-behavior: smooth; }
 
 body {
-    background-color: var(--dark);
-    color: #fff;
-    font-family: 'Outfit', sans-serif;
-    overflow-x: hidden;
-    line-height: 1.6;
+background: var(--dark);
+color: #fff;
+font-family: 'Outfit', sans-serif;
+overflow-x: hidden;
 }
 
-#bg-canvas { position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; }
+/* ================= BACKGROUND ================= */
+#bg-canvas {
+position: fixed;
+top: 0;
+left: 0;
+z-index: -1;
+width: 100%;
+height: 100%;
+}
 
-/* 2. NAVIGATION BAR (Clean & Working) */
+/* ================= NAVBAR ================= */
 .navbar {
-    position: fixed; top: 0; width: 100%; padding: 15px 0;
-    backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); z-index: 9999;
+position: fixed;
+top: 0;
+width: 100%;
+padding: 15px 0;
+backdrop-filter: blur(15px);
+border-bottom: 1px solid var(--border);
+z-index: 9999;
 }
-.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.logo { font-family: 'Space Grotesk'; font-size: 1.8rem; font-weight: 800; text-decoration: none; color: #fff; }
+
+.nav-container {
+max-width: 1200px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+padding: 0 20px;
+}
+
+.logo {
+font-family: 'Space Grotesk';
+font-size: 1.8rem;
+font-weight: 800;
+color: #fff;
+text-decoration: none;
+}
+
 .highlight { color: var(--cyan); }
-.nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
-.nav-links a { text-decoration: none; color: #fff; font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
-.nav-links a:hover, .nav-links a.active { color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
-.btn-contact { border: 1px solid var(--cyan); padding: 8px 20px; border-radius: 50px; color: var(--cyan) !important; }
 
-/* 3. MEGA GLOW TITLES */
-.section-title, .team-page-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    text-align: center; text-transform: uppercase;
-    margin-top: 150px; margin-bottom: 60px;
-    color: #fff;
-    text-shadow: 0 0 15px var(--cyan), 0 0 30px var(--cyan), 0 0 60px rgba(0, 240, 255, 0.5);
-    display: block; width: 100%;
+.nav-links {
+display: flex;
+gap: 25px;
+list-style: none;
 }
 
-/* 4. TEAM PAGE REPAIR (THE GOLA LOOK) */
-.section { padding: 60px 0; width: 100%; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.nav-links a {
+color: #fff;
+text-decoration: none;
+}
 
+.nav-links a:hover,
+.nav-links a.active {
+color: var(--cyan);
+text-shadow: 0 0 10px var(--cyan);
+}
+
+.btn-contact {
+border: 1px solid var(--cyan);
+padding: 8px 20px;
+border-radius: 50px;
+color: var(--cyan) !important;
+}
+
+/* ================= GLOBAL ================= */
+.container {
+max-width: 1200px;
+margin: auto;
+padding: 0 20px;
+}
+
+.section {
+padding: 120px 0;
+}
+
+.section-title {
+text-align: center;
+font-family: 'Space Grotesk';
+font-size: clamp(2.5rem, 6vw, 4rem);
+margin-bottom: 40px;
+
+```
+text-shadow:
+    0 0 10px var(--cyan),
+    0 0 25px var(--cyan),
+    0 0 50px rgba(0,240,255,0.4);
+```
+
+}
+
+.section-subtitle {
+text-align: center;
+color: rgba(255,255,255,0.6);
+margin-bottom: 40px;
+}
+
+/* ================= HERO ================= */
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 120px 20px;
+}
+
+.glitch-text {
+font-family: 'Space Grotesk';
+font-size: clamp(3rem, 8vw, 5rem);
+font-weight: 800;
+
+```
+text-shadow:
+    0 0 10px var(--cyan),
+    0 0 20px var(--cyan),
+    0 0 40px rgba(0,240,255,0.5);
+```
+
+}
+
+.subtitle {
+color: var(--cyan);
+margin-top: 10px;
+}
+
+.hero-desc {
+margin-top: 20px;
+color: rgba(255,255,255,0.7);
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+background: var(--cyan);
+color: #000;
+padding: 12px 30px;
+border-radius: 50px;
+border: none;
+font-weight: bold;
+}
+
+.btn-primary:hover {
+transform: scale(1.05);
+box-shadow: 0 0 25px var(--cyan);
+}
+
+.btn-secondary {
+border: 1px solid var(--cyan);
+color: var(--cyan);
+background: transparent;
+}
+
+.btn-secondary:hover {
+background: var(--cyan);
+color: #000;
+}
+
+/* ================= TEAM ================= */
 .team-grid {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;
-    padding: 20px 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
 }
 
 .team-card {
-    background: var(--glass);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(12px);
-    border-radius: 25px; padding: 40px 30px;
-    width: 300px; display: flex; flex-direction: column; align-items: center; text-align: center;
-    transition: 0.4s ease;
+width: 280px;
+padding: 30px;
+text-align: center;
+
+```
+background: var(--glass);
+border: 1px solid var(--border);
+border-radius: 20px;
+```
+
 }
 
-.team-card:hover { transform: translateY(-10px); border-color: var(--cyan); box-shadow: 0 0 30px rgba(0, 240, 255, 0.3); }
+.team-card:hover {
+transform: translateY(-10px);
+border-color: var(--cyan);
+box-shadow: 0 0 25px rgba(0,240,255,0.3);
+}
 
 .member-photo {
-    width: 170px; height: 170px;
-    border-radius: 50% !important; /* PERFECT GOLA */
-    border: 4px solid var(--cyan);
-    margin-bottom: 25px; object-fit: cover;
-    box-shadow: 0 0 20px var(--cyan);
+width: 150px;
+height: 150px;
+border-radius: 50%;
+border: 4px solid var(--cyan);
+object-fit: cover;
+margin-bottom: 20px;
 }
 
-.member-info h3 { font-family: 'Space Grotesk'; font-size: 1.6rem; color: #fff; margin-bottom: 5px; }
-.member-info .role { color: var(--cyan); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px; }
-
-/* 5. RESEARCH & EVENTS (Grid Fix) */
-.research-grid, .events-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px; margin-top: 40px;
+/* ================= CARDS ================= */
+.benefits-grid,
+.teams-desc-grid,
+.contact-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
 }
 
-.research-card, .event-card {
-    background: var(--glass); border: 1px solid var(--border);
-    border-radius: 20px; padding: 35px; text-align: left;
-    transition: 0.4s; position: relative;
+.benefit-card,
+.team-desc-card,
+.contact-card {
+padding: 25px;
+border-radius: 20px;
+background: var(--glass);
+border: 1px solid var(--border);
+text-align: center;
 }
 
-.tag {
-    display: inline-block; background: rgba(0, 240, 255, 0.1); color: var(--cyan);
-    padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 700;
-    border: 1px solid var(--cyan); margin-bottom: 20px;
+.benefit-card:hover,
+.team-desc-card:hover,
+.contact-card:hover {
+transform: translateY(-10px);
+border-color: var(--cyan);
+box-shadow: 0 0 25px rgba(0,240,255,0.3);
 }
 
-/* 6. LEADERBOARD TABLE FIX */
-.glass-panel { 
-    background: var(--glass); border: 1px solid var(--border); 
-    border-radius: 25px; padding: 30px; overflow-x: auto; 
-}
-
-.leaderboard-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-.leaderboard-table th { color: var(--cyan); text-align: left; padding: 18px; border-bottom: 2px solid var(--cyan); font-family: 'Space Grotesk'; }
-.leaderboard-table td { padding: 18px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-
-/* 7. JOIN FORM & BUTTONS */
+/* ================= FORMS ================= */
 input, select, textarea {
-    width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--border);
-    color: #fff; padding: 14px; border-radius: 10px; margin-bottom: 20px; outline: none;
+width: 100%;
+padding: 12px;
+border-radius: 10px;
+border: 1px solid var(--border);
+background: rgba(0,0,0,0.5);
+color: #fff;
 }
 
-.btn-primary, .btn-submit {
-    background: var(--cyan); color: #000; font-weight: 800; border: none;
-    padding: 14px 40px; border-radius: 50px; cursor: pointer; text-transform: uppercase;
-    box-shadow: 0 0 20px var(--cyan); transition: 0.3s; width: 100%;
+input:focus,
+textarea:focus,
+select:focus {
+border-color: var(--cyan);
+box-shadow: 0 0 10px var(--cyan);
 }
 
-.btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 40px var(--cyan); }
+.form-row {
+display: flex;
+gap: 20px;
+}
 
-/* 8. FOOTER REPAIR */
-footer { padding: 80px 0 30px; border-top: 1px solid var(--border); margin-top: 100px; background: rgba(0,0,0,0.3); }
-.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px; }
-.footer-brand h3 { color: var(--cyan); font-family: 'Space Grotesk'; font-size: 1.8rem; margin-bottom: 15px; }
-.footer-links h4 { color: #fff; margin-bottom: 20px; }
-.footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; display: block; margin-bottom: 12px; transition: 0.3s; }
-.footer-links a:hover { color: var(--cyan); transform: translateX(5px); }
-.copyright { text-align: center; margin-top: 60px; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
-
-/* 9. MOBILE FIXES */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .team-grid { gap: 20px; }
-    .team-card { width: 100%; }
-    .section-title { font-size: 2.8rem; }
+.form-row { flex-direction: column; }
+}
+
+.join-form,
+.auth-container {
+max-width: 800px;
+margin: auto;
+padding: 40px;
+background: var(--glass);
+border-radius: 20px;
+border: 1px solid var(--border);
+}
+
+/* ================= FAQ ================= */
+.faq-item {
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.faq-question {
+width: 100%;
+background: none;
+border: none;
+color: #fff;
+padding: 15px 0;
+display: flex;
+justify-content: space-between;
+cursor: pointer;
+}
+
+.faq-answer {
+max-height: 0;
+overflow: hidden;
+transition: 0.4s;
+}
+
+.faq-item.open .faq-answer {
+max-height: 200px;
+padding-bottom: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+padding: 80px 0;
+border-top: 1px solid var(--border);
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.footer-links a {
+display: block;
+color: rgba(255,255,255,0.6);
+margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+color: var(--cyan);
+}
+
+.copyright {
+text-align: center;
+margin-top: 40px;
+color: rgba(255,255,255,0.4);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+.nav-links { display: none; }
 }
